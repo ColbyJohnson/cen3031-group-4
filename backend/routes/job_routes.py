@@ -1,6 +1,7 @@
 from flask import Blueprint, request, jsonify
 from models import db, Job, Profile
 from sqlalchemy import or_
+from difflib import get_close_matches
 
 job_bp = Blueprint('job', __name__)
 
@@ -132,15 +133,27 @@ def match_jobs(user_id):
     if not profile or not profile.skills:
         return jsonify({'message': 'Profile with skills not found'}), 404
 
-    skills = profile.skills.lower().split(',')
+    skills = [s.strip().lower() for s in profile.skills.split(',') if s.strip()]
 
-    # Very basic keyword match in job descriptions and titles
     jobs = Job.query.all()
     matched_jobs = []
 
     for job in jobs:
-        job_text = f"{job.title} {job.description}".lower()
-        if any(skill.strip() in job_text for skill in skills):
+        job_text = f"{job.title} {job.description}".lower().split()
+        matched = False
+
+        for skill in skills:
+            for word in job_text:
+                if word.startswith(skill) or skill in word:
+                    matched = True
+                    break
+                if get_close_matches(skill, [word], cutoff=0.75):
+                    matched = True
+                    break
+            if matched:
+                break
+
+        if matched:
             matched_jobs.append({
                 'id': job.id,
                 'title': job.title,
