@@ -34,14 +34,15 @@ Job seekers track application status; employers monitor applicants.
 ## Screenshots
 
 
-### Dashboard
-![Dashboard Screenshot](https://raw.githubusercontent.com/colbyjohnson/cen3031-group-4/main/dashboard.png)
+### Dashboard  
+![Dashboard Screenshot](https://raw.githubusercontent.com/colbyjohnson/cen3031-group-4/main/Dashboard.png)
 
-### Login
-![Login Screenshot](https://raw.githubusercontent.com/colbyjohnson/cen3031-group-4/main/login.png)
+### Login  
+![Login Screenshot](https://raw.githubusercontent.com/colbyjohnson/cen3031-group-4/main/Login.png)
 
-### Register
+### Register  
 ![Register Screenshot](https://raw.githubusercontent.com/colbyjohnson/cen3031-group-4/main/register.png)
+
 
 
 
