@@ -82,8 +82,8 @@ pip install -r requirements.txt
 #3. Configure the Database:
 
 python
->>> from app import db
->>> db.create_all()
+ from app import db
+ db.create_all()
 
 This will create the required tables: User, Profile, Job, and Application.
 
