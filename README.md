@@ -36,15 +36,12 @@ Here are some visual representations of the platform:
 
 ### Dashboard
 ![Dashboard Screenshot](Dashboard.png)
-*This is a view of the main dashboard where users can see relevant job listings and other key information.*
 
 ### Login
 ![Login Screenshot](Login.png)
-*This is the user login page where existing users can securely access their accounts.*
 
 ### Register
 ![Register Screenshot](register.png)
-*This is the new user registration form where individuals can create an account on the platform.*
 
 ---
 
